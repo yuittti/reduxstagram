@@ -1,9 +1,6 @@
 function posts(state = [], action) {
     switch(action.type) {
         case 'INCREMENT_LIKES':
-            console.log('incrementing');
-            console.log(action);
-            console.log(state);
             const i = action.index;
             return [
                 ...state.slice(0,i), // before the one we are updating
@@ -13,7 +10,6 @@ function posts(state = [], action) {
         default:
             return state;
     }
-    
 }
 
 export default posts;
